@@ -43,17 +43,14 @@ function generateOrSave(e) {
 
 function generateGradient() {
 	
-	// Assign style
 	const newStyle = styles[Math.floor(Math.random() * styles.length)];
 	
-	// console.log(styles, styles[Math.floor(Math.random() * styles.length)]);
 	
 	if (currentStyle) canvas.classList.remove(`random--${currentStyle}`);
 	
 	currentStyle = newStyle;
 	canvas.classList.add(`random--${newStyle}`);
 	
-	// Loop through each canvas and assign a bunch of random CSS variables
 	const shapes = canvas.getElementsByClassName('shape');
 
 	document.body.style.setProperty('--r-h', `${random(0, 360)}deg`);
@@ -77,8 +74,7 @@ function generateGradient() {
 }
 
 
-// Convert RGB colour to Hex
-// Needed for api.color.pizza call
+
 const rgba2hex = (rgba) => `#${rgba.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+\.{0,1}\d*))?\)$/).slice(1).map((n, i) => (i === 3 ? Math.round(parseFloat(n) * 255) : parseFloat(n)).toString(16).padStart(2, '0').replace('NaN', '')).join('')}`
 
 
