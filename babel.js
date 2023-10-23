@@ -1,4 +1,3 @@
-// Tiny bit of JS to ensure that the notch doesn't move about when you resize the screen
 
 
 const delay = 300;
@@ -17,9 +16,8 @@ document.getElementById('zoom').addEventListener('click', () => {
 });
 
 
-// Generating random gradient
 
-let dimension = 1000; // Size of tile to be download px
+let dimension = 1000; 
 
 const styles = ['colourful', 'moody', 'neon', 'abstract', 'grayscale', 'light-leak'];
 
