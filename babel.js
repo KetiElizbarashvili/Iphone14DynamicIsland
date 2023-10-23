@@ -82,24 +82,19 @@ function generateGradient() {
 const rgba2hex = (rgba) => `#${rgba.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+\.{0,1}\d*))?\)$/).slice(1).map((n, i) => (i === 3 ? Math.round(parseFloat(n) * 255) : parseFloat(n)).toString(16).padStart(2, '0').replace('NaN', '')).join('')}`
 
 
-// Save gradient
 function saveGradient(e) {
 	const gradient = canvas;
 	const rect = gradient.getBoundingClientRect();
 	const scale = dimension / rect.width
 
-	//	Get canvas background color
 	const color = rgba2hex(window.getComputedStyle(gradient, null).getPropertyValue('background-color'));
 	
 	console.log(color, scale, rect);
 	
-	// Get name of color for use in file name
 	fetch(`https://api.color.pizza/v1/${color.substring(1)}`)
 		.then(c => c.json())
 		.then(c => {
-			// console.log(c);
 		
-			// Convert DOM to canvas
 			domtoimage.toPng(gradient, {
 				bgColor: '#ffffff',
 				width: rect.width * scale,
