@@ -1,106 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <link rel="stylesheet" href="styles.scss" />
 
-    <title>  </title>
-  </head>
-  <body>  
-
-input(name="theme" type="radio" id="deep-purple" checked)
-input(name="theme" type="radio" id="gold")
-input(name="theme" type="radio" id="space-black")
-input(name="theme" type="radio" id="silver")
-input(name="theme" type="radio" id="random")
-input(name="zoom" type="checkbox" id="zoom")
-
-
-.scene
-
-	.pallette
-		label.swatch(tabIndex="0" for="deep-purple")
-		label.swatch(tabIndex="0" for="gold")
-		label.swatch(tabIndex="0" for="space-black")
-		label.swatch(tabIndex="0" for="silver")
-		label.swatch(tabIndex="0" for="random")
-			.icon
-			.tooltip CMD + click to save
-		
-	.zoom-con
-		label.swatch(tabIndex="0" for="zoom")
-	
-	.phone-con
-		.phone
-			.buttons
-				.left
-					.button
-					.button
-					.button
-				.right
-					.button
-			.camera
-			.screen-container
-				.bg
-					.deep-purple
-						.section
-							.glow
-						.section
-							.glow
-					.gold
-						.section
-							.glow
-						.section
-							.glow
-					.space-black
-						.section
-							.glow
-						.section
-							.glow
-					.silver
-						.section
-							.glow
-						.section
-							.glow
-					.random.canvas
-						.shapes
-							.shape
-							.shape
-							.shape
-							.shape
-							.shape
-							.shape
-				.notch-container(tabIndex="0")
-					.notch
-						.content
-							.left
-								.tile
-								.text
-							.right
-							.bar
-								.duration
-				.notch-blur
-				.screen
-					.app
-						.weather
-					.app
-					.app
-					.app
-					.app
-					.app
-					.app
-					.app
-					.app
-					.app 
-
-
-					
-    <script src="script.js"> </script> 
-    
- 
-</body>
-</html>   
-
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='styles.scss')
+    title Your Page Title
+  body
+    input(name='theme', type='radio', id='deep-purple', checked)
+    input(name='theme', type='radio', id='gold')
+    input(name='theme', type='radio', id='space-black')
+    input(name='theme', type='radio', id='silver')
+    input(name='theme', type='radio', id='random')
+    input(name='zoom', type='checkbox', id='zoom')
+    .scene
+      .pallette
+        label.swatch(for='deep-purple', tabIndex='0')
+        label.swatch(for='gold', tabIndex='0')
+        label.swatch(for='space-black', tabIndex='0')
+        label.swatch(for='silver', tabIndex='0')
+        label.swatch(for='random', tabIndex='0')
+          .icon
+          .tooltip CMD + click to save
+      .zoom-con
+        label.swatch(for='zoom', tabIndex='0')
+      .phone-con
+        .phone
+          .buttons
+            .left
+              .button
+              .button
+              .button
+            .right
+              .button
+          .camera
+          .screen-container
+            .bg
+              .deep-purple
+                .section
+                  .glow
+                .section
+                  .glow
+              .gold
+                .section
+                  .glow
+                .section
+                  .glow
+              .space-black
+                .section
+                  .glow
+                .section
+                  .glow
+              .silver
+                .section
+                  .glow
+                .section
+                  .glow
+              .random.canvas
+                .shapes
+                  .shape
+                  .shape
+                  .shape
+                  .shape
+                  .shape
+                  .shape
+            .notch-container(tabIndex='0')
+              .notch
+                .content
+                  .left
+                    .tile
+                      .text
+                  .right
+                  .bar
+                    .duration
+              .notch-blur
+            .screen
+              .app
+                .weather
+              .app
+              .app
+              .app
+              .app
+              .app
+              .app
+              .app
+              .app
+              .app
+    script(src='script.js')
  
